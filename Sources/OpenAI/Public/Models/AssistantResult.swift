@@ -13,7 +13,7 @@ public struct AssistantResult: Codable, Equatable {
     public let description: String?
     public let instructions: String?
     public let tools: [Tool]?
-    public let fileIds: [String]?
+	public let tool_resources: ToolResources?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -21,6 +21,6 @@ public struct AssistantResult: Codable, Equatable {
         case description
         case instructions
         case tools
-        case fileIds = "file_ids"
+		case tool_resources
     }
 }

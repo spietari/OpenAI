@@ -62,3 +62,13 @@ public enum Tool: Codable, Equatable {
         }
     }
 }
+
+public struct ToolResources: Codable, Equatable {
+	var fileSearch: Dictionary<String, Dictionary<String, [String]>>?
+	var codeInterpreter: Dictionary<String, Dictionary<String, [String]>>?
+	
+	enum CodingKeys: String, CodingKey {
+		case fileSearch = "file_search"
+		case codeInterpreter = "code_interpreter"
+	}
+}
